@@ -63,7 +63,8 @@ resource "aws_neptune_cluster" "default" {
   neptune_subnet_group_name = aws_neptune_subnet_group.default.name
   vpc_security_group_ids = [aws_security_group.sg_neptune_db.id]
   port = local.neptune_db_port
-  cluster_parameter_group_name        = "default.neptune1.3"  # Specify your existing parameter group here
+  cluster_parameter_group_name         = "custom-neptune1"
+  #cluster_parameter_group_name        = "default.neptune1.3"  # Specify your existing parameter group here
 }
 
 resource "aws_neptune_cluster_instance" "data_lineage_instance" {

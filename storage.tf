@@ -75,4 +75,5 @@ resource "aws_neptune_cluster_instance" "data_lineage_instance" {
   instance_class      = "db.t3.medium"
   neptune_subnet_group_name = aws_neptune_subnet_group.default.name
   port = local.neptune_db_port
+  neptune_cluster_parameter_group_name = "default.neptune1.3" # Specify your existing parameter group here
 }

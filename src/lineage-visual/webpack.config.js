@@ -2,6 +2,7 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
+  mode: 'development',
   entry: './src/main.js', // Entry point for your application
   output: {
     path: path.resolve(__dirname, 'dist'), // Output directory
@@ -31,6 +32,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@': path.resolve(__dirname, 'src'),
       vue$: 'vue/dist/vue.runtime.esm.js',
     },
     extensions: ['*', '.js', '.vue', '.json'],

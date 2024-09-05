@@ -19,5 +19,9 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "scripts": {
+  "build": "webpack --config webpack.config.js",
+  "start": "webpack-dev-server --config webpack.config.js"
+}
 }
